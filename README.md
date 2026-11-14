@@ -1,5 +1,7 @@
 # Guess the City
 
+**Live: https://sezabart.github.io/city-guesser/**
+
 A city-guessing game for the living room: eight photographs, seven choices each,
 nothing but roofs, streets and skylines to go on. Built for a TV and a remote
 control, and made of **plain HTML + one stylesheet — no JavaScript at all**.
@@ -21,18 +23,18 @@ where you are from the sofa.
 
 ## Publish on GitHub Pages
 
-```sh
-git init
-git add .
-git commit -m "Guess the City"
-git branch -M main
-git remote add origin git@github.com:USER/REPO.git
-git push -u origin main
-```
+This repo is already published: **Settings → Pages → Source: Deploy from a branch →
+main / (root)**. Push to `main` and GitHub rebuilds the site in about a minute;
+no Actions workflow, no build step.
 
-Then in the repo: **Settings → Pages → Source: Deploy from a branch → main / (root)**.
-The game appears at `https://USER.github.io/REPO/`. No build step, no Jekyll
-config, nothing to configure — `index.html` is the entry point.
+To deploy a copy of your own:
+
+```sh
+gh repo create my-city-guesser --public --source=. --remote=origin --push
+gh api --method POST repos/OWNER/my-city-guesser/pages \
+  -f source[branch]=main -f source[path]=/
+```
+The game appears at `https://OWNER.github.io/my-city-guesser/`.
 
 You can also drag the files into a repo through the GitHub web UI; the only
 requirement is that `index.html`, `style.css` and `images/` stay together at the
