@@ -12,6 +12,10 @@ Open `index.html`. Or publish it (below) and point the TV browser at the URL.
 - **OK / Enter** confirms
 - **1–7** jump straight to an answer (if the TV browser sends bare number keys)
 
+If you are testing on a laptop rather than a TV: smart-TV and set-top browsers
+handle the arrow keys themselves, but desktop browsers don't — there use **Tab**
+to move between answers, or **Alt+1…7** for the number shortcuts.
+
 The focused answer turns solid yellow with a white ring, so you can always tell
 where you are from the sofa.
 

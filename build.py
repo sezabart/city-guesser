@@ -269,8 +269,11 @@ def credits_page():
     items = []
     for c in data:
         city = city_of.get(c["file"], c["file"])
+        title = c["title"]
+        if title.lower().endswith(".jpg"):
+            title = title[:-4]
         items.append(
-            f'<li><b>{city}</b> &mdash; {c["title"]}, by {c["author"]} '
+            f'<li><b>{city}</b> &mdash; {title}, by {c["author"]} '
             f'({c["license"]}), via '
             f'<a href="{c["page"]}">Wikimedia Commons</a>.</li>'
         )
