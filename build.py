@@ -269,13 +269,10 @@ def credits_page():
     items = []
     for c in data:
         city = city_of.get(c["file"], c["file"])
-        title = c["title"]
-        if title.lower().endswith(".jpg"):
-            title = title[:-4]
         items.append(
-            f'<li><b>{city}</b> &mdash; {title}, by {c["author"]} '
-            f'({c["license"]}), via '
-            f'<a href="{c["page"]}">Wikimedia Commons</a>.</li>'
+            f'<li><b>{city}</b> &mdash; photograph by {c["author"]} '
+            f'({c["license"]}), '
+            f'<a href="{c["page"]}">source on Wikimedia Commons</a>.</li>'
         )
     if not items:
         items = ["<li>Photo credits unavailable.</li>"]
