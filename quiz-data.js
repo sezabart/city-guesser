@@ -201,5 +201,82 @@ window.QUIZ = [
     fact: "Bluestone cobbles, wheelie bins and every wall repainted by someone new: Melbourne treats its laneways as a free gallery.",
     choices: ["Melbourne", "Sydney", "Auckland", "Wellington", "Adelaide", "Brisbane", "Perth"],
     credit: { author: "Bernard Spragg. NZ from Christchurch, New Zealand", license: "CC0", page: "https://commons.wikimedia.org/wiki/File:Hosier_Lane_Melbourne._(25242293926).jpg" }
+  },
+  {
+    city: "Athens",
+    image: "images/29-athens.jpg",
+    fact: "Polykatoikia: concrete apartment blocks with a balcony on every floor, canvas awnings against the sun, and the top floor often left unfinished in case the family builds upward.",
+    choices: ["Athens", "Thessaloniki", "Patras", "Pyraeus", "Heraklion", "Nicosia", "Izmir"],
+    credit: { author: "macrolepis", license: "CC BY 3.0", page: "https://commons.wikimedia.org/wiki/File:Kolonaki,_Athens_-_panoramio_-_macrolepis_(3).jpg" }
+  },
+  {
+    city: "Moscow",
+    image: "images/30-moscow.jpg",
+    fact: "A courtyard in the old centre: a whitewashed brick wing with yellow gas pipes running along the wall, ventilation grilles, and cars on the asphalt by the door.",
+    choices: ["Moscow", "Saint Petersburg", "Kyiv", "Minsk", "Kharkiv", "Nizhny Novgorod", "Kazan"],
+    credit: { author: "Retired electrician", license: "CC0", page: "https://commons.wikimedia.org/wiki/File:Moscow,_B_Kharitonyevsky_14_yard_Aug_2024_10.jpg" }
+  },
+  {
+    city: "Lisbon",
+    image: "images/31-lisbon.jpg",
+    fact: "Azulejo tiles across the whole facade. They keep the rain out and the summer sun off, and each street has its own pattern.",
+    choices: ["Lisbon", "Porto", "Setubal", "Coimbra", "Aveiro", "Malaga", "Seville"],
+    credit: { author: "NorbertNagel", license: "CC BY-SA 4.0", page: "https://commons.wikimedia.org/wiki/File:Azulejo_facade_in_Rua_de_S%C3%A3o_Bento_-_Lisbon_-_Portugal.jpg" }
+  },
+  {
+    city: "Berlin",
+    image: "images/32-berlin.jpg",
+    fact: "Plattenbau: precast concrete slabs craned into place floor by floor, one balcony pattern repeated to the horizon, cars parked on the grass.",
+    choices: ["Berlin", "Hamburg", "Leipzig", "Dresden", "Frankfurt", "Hanover", "Vienna"],
+    credit: { author: "Sludge G", license: "CC BY-SA 2.0", page: "https://commons.wikimedia.org/wiki/File:Plattenbau,_Berlin_Friedrichsfelde._(5037290202).jpg" }
+  },
+  {
+    city: "Riga",
+    image: "images/33-riga.jpg",
+    fact: "Art nouveau with every stop out: atlantes holding up the balconies, peacocks and sphinxes. A third of the old centre went up in about fifteen years before 1914.",
+    choices: ["Riga", "Tallinn", "Vilnius", "Helsinki", "Saint Petersburg", "Gdansk", "Gothenburg"],
+    credit: { author: "Scotch Mist", license: "CC BY-SA 4.0", page: "https://commons.wikimedia.org/wiki/File:Art_Nouveau_Riga_46.jpg" }
+  },
+  {
+    city: "Bucharest",
+    image: "images/34-bucharest.jpg",
+    fact: "Panel blocks in six colours behind the tram wires: the same four-storey system-built walk-up repeated for kilometre after kilometre.",
+    choices: ["Bucharest", "Cluj-Napoca", "Timisoara", "Sofia", "Belgrade", "Chisinau", "Skopje"],
+    credit: { author: "Daniele Napolitano", license: "CC BY-SA 4.0", page: "https://commons.wikimedia.org/wiki/File:Colored_blocks_in_Bucharest_in_Pia%C8%9Ba_Eroii_Revolu%C8%9Biei.jpg" }
+  },
+  {
+    city: "Bogota",
+    image: "images/35-bogota.jpg",
+    fact: "Red brick towers, brick paving, and a 3,000-metre green ridge closing the end of every street.",
+    choices: ["Bogota", "Medellin", "Cali", "Quito", "Pereira", "Barranquilla", "Caracas"],
+    credit: { author: "Felipe Restrepo Acosta", license: "CC BY-SA 4.0", page: "https://commons.wikimedia.org/wiki/File:Bogot%C3%A1_calle_52_oriente_de_la_ciudad,_Chapinero.jpg" }
+  },
+  {
+    city: "Busan",
+    image: "images/36-busan.jpg",
+    fact: "Painted houses stacked up a hillside with staircases instead of streets, the port and the apartment towers below.",
+    choices: ["Busan", "Incheon", "Daegu", "Ulsan", "Pohang", "Seoul", "Fukuoka"],
+    credit: { author: "Sergiy Galyonkin", license: "CC BY-SA 4.0", page: "https://commons.wikimedia.org/wiki/File:Colorful_hillside_homes_in_Busan_(55618802222).jpg" }
+  },
+  {
+    city: "Auckland",
+    image: "images/37-auckland.jpg",
+    fact: "Wooden villas with a veranda across the front, fretwork at the gable and a picket fence: the Auckland house, built in kauri and rimu.",
+    choices: ["Auckland", "Wellington", "Christchurch", "Dunedin", "Hamilton", "Adelaide", "Hobart"],
+    credit: { author: "DB Thats-Me", license: "CC BY-SA 3.0", page: "https://commons.wikimedia.org/wiki/File:Return_veranda_villa._c.1920_-_panoramio.jpg" }
+  },
+  {
+    city: "Accra",
+    image: "images/38-accra.jpg",
+    fact: "Colonial-era arcades and balustraded flat roofs in ochre and yellow, with traders set up along the pavement of the old quarter.",
+    choices: ["Accra", "Lagos", "Abidjan", "Lome", "Cotonou", "Kumasi", "Dakar"],
+    credit: { author: "Matti Blume", license: "CC BY-SA 4.0", page: "https://commons.wikimedia.org/wiki/File:Jamestown,_Accra_(P1100265).jpg" }
+  },
+  {
+    city: "Kolkata",
+    image: "images/39-kolkata.jpg",
+    fact: "Stucco over brick gone grey, awnings out to the kerb, shop signs stacked three storeys up and the whole street under a web of cable.",
+    choices: ["Kolkata", "Mumbai", "Delhi", "Dhaka", "Patna", "Lucknow", "Colombo"],
+    credit: { author: "Billjones94", license: "CC BY-SA 4.0", page: "https://commons.wikimedia.org/wiki/File:The_New_Market_seen_from_far,_and_Kolkata_Municipal_Corporation_building_in_right,_in_Kolkata,_West_Bengal.jpg" }
   }
 ];
