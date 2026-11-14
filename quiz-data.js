@@ -117,5 +117,89 @@ window.QUIZ = [
     fact: "A sea of flat roofs and satellite dishes in the haze, with a thousand minarets poking through it.",
     choices: ["Cairo", "Alexandria", "Damascus", "Amman", "Baghdad", "Casablanca", "Tunis"],
     credit: { author: "Vyacheslav Argenberg", license: "CC BY 4.0", page: "https://commons.wikimedia.org/wiki/File:Egypt,_Cairo,_Panorama_of_Islamic_Cairo,_also_Medieval_Cairo_or_Fatimid_Cairo.jpg" }
+  },
+  {
+    city: "Reykjavík",
+    image: "images/17-reykjavik.jpg",
+    fact: "Corrugated steel painted in primary colours. There is no timber in Iceland and imports were always dear, so the houses are clad in galvanised sheet.",
+    choices: ["Reykjavík", "Tromsø", "Tórshavn", "Nuuk", "Akureyri", "Ålesund", "Bodø"],
+    credit: { author: "Christine Zenino from Chicago, US", license: "CC BY 2.0", page: "https://commons.wikimedia.org/wiki/File:Reykjav%C3%ADk_(3841483984).jpg" }
+  },
+  {
+    city: "Genoa",
+    image: "images/18-genoa.jpg",
+    fact: "The caruggi: alleys three metres wide in the old port town, the walls painted in bright plaster and fake columns to catch what little light gets down there.",
+    choices: ["Genoa", "Naples", "Trieste", "Livorno", "Marseille", "Barcelona", "Palermo"],
+    credit: { author: "Ralf Steinberger from Milan, Berlin + Munich, Italy + Germany", license: "CC BY 2.0", page: "https://commons.wikimedia.org/wiki/File:Colourful_facade_in_the_old_town_of_Genova,_Italy_(25260951038).jpg" }
+  },
+  {
+    city: "Kraków",
+    image: "images/19-krakow.jpg",
+    fact: "Steep attic roofs, copper spires and brick chimneys stacked up behind the market square, with the twin towers of the Mariacki church over the top of them.",
+    choices: ["Kraków", "Lviv", "Warsaw", "Prague", "Wrocław", "Vilnius", "Poznań"],
+    credit: { author: "J Doll", license: "CC BY 3.0", page: "https://commons.wikimedia.org/wiki/File:Krakow_Rooftops_(140469463).jpeg" }
+  },
+  {
+    city: "Bangkok",
+    image: "images/20-bangkok.jpg",
+    fact: "Concrete, glass towers and an elevated railway threaded between them. The city grew upward first and the Skytrain followed the money.",
+    choices: ["Bangkok", "Jakarta", "Manila", "Kuala Lumpur", "Ho Chi Minh City", "Taipei", "Singapore"],
+    credit: { author: "Vyacheslav Argenberg", license: "CC BY 4.0", page: "https://commons.wikimedia.org/wiki/File:Bangkok_skyline,_BTS_Skytrain,_Bangkok,_Thailand.jpg" }
+  },
+  {
+    city: "Taipei",
+    image: "images/21-taipei.jpg",
+    fact: "Boulevards with a scooter lane down each side, tiled apartment blocks, glass towers, and green hills closing off the end of every street.",
+    choices: ["Taipei", "Kaohsiung", "Taichung", "Seoul", "Osaka", "Xiamen", "Hong Kong"],
+    credit: { author: "Lord Koxinga", license: "CC BY-SA 3.0", page: "https://commons.wikimedia.org/wiki/File:2010_07_22470_6992_Xinyi_District,_Taipei,_Buildings,_Streets_in_Taipei,_Taiwan.JPG" }
+  },
+  {
+    city: "Mexico City",
+    image: "images/22-mexicocity.jpg",
+    fact: "Signs painted straight onto the walls — dance school, baldeadoras, lonchería — with graffiti sprayed over the top and a 1950s department store on the corner.",
+    choices: ["Mexico City", "Guadalajara", "Puebla", "Bogotá", "Lima", "Buenos Aires", "Medellín"],
+    credit: { author: "Keizers", license: "CC BY-SA 4.0", page: "https://commons.wikimedia.org/wiki/File:Ex-Salinas_y_Rocha_Dept_Store,_Roma_Norte,_Av._Insurgentes_Sur_171,_December_2014.jpg" }
+  },
+  {
+    city: "Jerusalem",
+    image: "images/23-jerusalem.jpg",
+    fact: "Every wall, roof and dome is the same pale limestone — by law, new buildings have to be faced in it — so the whole city reads as one colour.",
+    choices: ["Jerusalem", "Amman", "Safed", "Nablus", "Bethlehem", "Damascus", "Beirut"],
+    credit: { author: "Maarten van der Bent", license: "CC BY-SA 2.0", page: "https://commons.wikimedia.org/wiki/File:Jerusalem_rooftops_(32213734996).jpg" }
+  },
+  {
+    city: "Valparaíso",
+    image: "images/24-valparaiso.jpg",
+    fact: "Tin-clad houses painted in whatever colour was cheap, stacked up the hills above the container port, with staircases instead of streets between them.",
+    choices: ["Valparaíso", "Viña del Mar", "Concepción", "Santiago", "Callao", "Guayaquil", "Cartagena"],
+    credit: { author: "Alex Proimos from Sydney, Australia", license: "CC BY 2.0", page: "https://commons.wikimedia.org/wiki/File:Coloured_Fronts_(3927272807).jpg" }
+  },
+  {
+    city: "Zanzibar City",
+    image: "images/25-zanzibar.jpg",
+    fact: "Coral-rag walls washed white, carved Indian-style balconies, air-conditioning boxes and corrugated iron. The alleys of Stone Town are barely wide enough for a cart.",
+    choices: ["Zanzibar City", "Mombasa", "Lamu", "Dar es Salaam", "Moroni", "Antananarivo", "Maputo"],
+    credit: { author: "Timothy A. Gonsalves", license: "CC BY-SA 4.0", page: "https://commons.wikimedia.org/wiki/File:Narrow_Street_Stone_Town_Zanzibar_Oct26_A7CR_14422.jpg" }
+  },
+  {
+    city: "Buenos Aires",
+    image: "images/26-buenosaires.jpg",
+    fact: "Colectivos nose-to-tail on a wide avenue of plane trees and 1970s apartment slabs — Avenida Cabildo, far out in Belgrano.",
+    choices: ["Buenos Aires", "Montevideo", "Rosario", "Córdoba", "Santiago", "Lima", "Asunción"],
+    credit: { author: "Lombardia1", license: "CC BY-SA 4.0", page: "https://commons.wikimedia.org/wiki/File:Cabildo_Avenue_in_Buenos_Aires.jpg" }
+  },
+  {
+    city: "Montreal",
+    image: "images/27-montreal.jpg",
+    fact: "Brick triplexes with the staircase on the outside, twisting up to the second floor. Narrow lots and cheap ironwork made Montreal build its stairs where nobody else does.",
+    choices: ["Montreal", "Quebec City", "Ottawa", "Toronto", "Boston", "Halifax", "Winnipeg"],
+    credit: { author: "Andre Carrotflower", license: "CC BY-SA 4.0", page: "https://commons.wikimedia.org/wiki/File:20181013_-_42_-_Montreal_(Plateau).jpg" }
+  },
+  {
+    city: "Melbourne",
+    image: "images/28-melbourne.jpg",
+    fact: "Bluestone cobbles, wheelie bins and every wall repainted by someone new: Melbourne treats its laneways as a free gallery.",
+    choices: ["Melbourne", "Sydney", "Auckland", "Wellington", "Adelaide", "Brisbane", "Perth"],
+    credit: { author: "Bernard Spragg. NZ from Christchurch, New Zealand", license: "CC0", page: "https://commons.wikimedia.org/wiki/File:Hosier_Lane_Melbourne._(25242293926).jpg" }
   }
 ];
