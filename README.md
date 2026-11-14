@@ -47,15 +47,17 @@ once the unseen ones run out — the oldest first — and once the whole bank ha
 been played the cycle starts again from nothing.
 
 The record is a list of city names in the browser's `localStorage`, under
-`cityguesser.seen.v1`: no account, no server, nothing to sign into. The title
+`cityguesser.seen.v2`: no account, no server, nothing to sign into. The title
 screen says how many photographs are still new and has a **Forget what I have
 seen** button (the arrow keys reach it) for a clean slate. If a browser has no
 storage the game still skips within the session; it just forgets between
 visits.
 
 `SEEN_SEED` at the top of `game.js` holds the cities played before the game
-remembered anything. It is written into the store on the first run and then
-stops mattering — trim or empty it once the history has taken over.
+remembered anything (the first twenty-eight). It is written into the store on
+the first run and then stops mattering. Bump the version in `STORE`
+(`cityguesser.seen.v3`) to re-apply a new seed on every browser, including one
+that already has a history.
 
 ## Add a city
 

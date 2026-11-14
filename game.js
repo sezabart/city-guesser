@@ -56,20 +56,21 @@
   // not come up yet and only repeats when the unseen ones run out. Progress is
   // kept in localStorage; a browser without storage still skips within the
   // session, it just forgets between visits.
-  var STORE = "cityguesser.seen.v1";
+  var STORE = "cityguesser.seen.v2";   // bump the version to re-apply SEEN_SEED
+  var STORE_OLD = "cityguesser.seen.v1";
   var SEP = "|";
 
   // Photographs played before the game kept track of itself. Written into the
   // store once, on the first run after this ships, so the TV does not hand back
   // a city that has already been seen. "Forget what I have seen" clears it.
+  // The first twenty-eight: everything added up to and including Melbourne.
   var SEEN_SEED = [
     "Paris", "Porto", "Istanbul", "Tbilisi", "Chicago", "S\u00e3o Paulo",
     "Seoul", "Hong Kong", "Valletta", "Havana", "Hanoi", "Marrakesh",
     "Naples", "Rotterdam", "Bergen", "Cairo", "Reykjav\u00edk", "Genoa",
     "Krak\u00f3w", "Bangkok", "Taipei", "Mexico City", "Jerusalem",
     "Valpara\u00edso", "Zanzibar City", "Buenos Aires", "Montreal",
-    "Melbourne", "Athens", "Moscow", "Lisbon", "Berlin", "Riga",
-    "Bucharest", "Bogota", "Busan", "Auckland", "Accra", "Kolkata"
+    "Melbourne"
   ];
 
   var seenMem = null;   // stands in for localStorage where there is none
@@ -97,6 +98,7 @@
   function seenList() {
     var list = seenRead();
     if (list === null) {                 // first run here, or no storage at all
+      try { window.localStorage.removeItem(STORE_OLD); } catch (e) {}
       list = seenMem ? seenMem.slice() : SEEN_SEED.slice();
       seenWrite(list);
     }
