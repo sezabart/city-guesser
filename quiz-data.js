@@ -306,5 +306,54 @@ window.QUIZ = [
     fact: "Gers pitched in fenced yards up the hillside, timber and corrugated iron around them, glass towers down in the valley.",
     choices: ["Ulaanbaatar", "Bishkek", "Almaty", "Ulan-Ude", "Irkutsk", "Astana", "Tashkent"],
     credit: { author: "Quintin Soloviev", license: "CC BY 4.0", page: "https://commons.wikimedia.org/wiki/File:Ger_district_of_Ulaanbaatar.jpg" }
+  },
+  {
+    city: "Mumbai",
+    image: "images/44-mumbai.jpg",
+    fact: "Chawls: brick walk-ups with wooden galleries, a metre of pavement, and enough cable overhead to string a bridge.",
+    choices: ["Mumbai", "Pune", "Surat", "Ahmedabad", "Karachi", "Chennai", "Hyderabad"],
+    credit: { author: "Gannu03", license: "CC BY-SA 4.0", page: "https://commons.wikimedia.org/wiki/File:Buildings_in_Mumbai_2.jpg" }
+  },
+  {
+    city: "Tokyo",
+    image: "images/45-tokyo.jpg",
+    fact: "Three-storey houses pressed up against each other, cables overhead, potted plants at the door and no pavement to speak of.",
+    choices: ["Tokyo", "Osaka", "Nagoya", "Yokohama", "Sendai", "Sapporo", "Fukuoka"],
+    credit: { author: "Real Estate Japan", license: "CC BY 2.0", page: "https://commons.wikimedia.org/wiki/File:Residential_street_in_Shinjuku.jpg" }
+  },
+  {
+    city: "Glasgow",
+    image: "images/46-glasgow.jpg",
+    fact: "Red sandstone tenements, four floors to a close, shops at ground level and a chimney stack every few doors.",
+    choices: ["Glasgow", "Edinburgh", "Dundee", "Aberdeen", "Belfast", "Newcastle", "Manchester"],
+    credit: { author: "Richard Sutcliffe", license: "CC BY-SA 2.0", page: "https://commons.wikimedia.org/wiki/File:Tenement_flats,_Hawthorn_Street_-_geograph.org.uk_-_5300557.jpg" }
+  },
+  {
+    city: "Amman",
+    image: "images/47-amman.jpg",
+    fact: "Hillsides of white limestone boxes with flat roofs: the same cream slabs, the same dark windows, for mile after mile.",
+    choices: ["Amman", "Damascus", "Beirut", "Jerusalem", "Nablus", "Irbid", "Riyadh"],
+    credit: { author: "Deror_avi", license: "CC BY-SA 3.0", page: "https://commons.wikimedia.org/wiki/File:Amman_P1090359.JPG" }
+  },
+  {
+    city: "Nairobi",
+    image: "images/48-nairobi.jpg",
+    fact: "Matatus painted in every colour against plain concrete blocks, jacaranda and palms over the pavements.",
+    choices: ["Nairobi", "Kampala", "Dar es Salaam", "Mombasa", "Kigali", "Addis Ababa", "Lusaka"],
+    credit: { author: "Bahnfrend", license: "CC BY-SA 4.0", page: "https://commons.wikimedia.org/wiki/File:Nairobi_Isuzu_NQR,_Gedi_Street,_2025_(02).jpg" }
+  },
+  {
+    city: "Palermo",
+    image: "images/49-palermo.jpg",
+    fact: "Ochre and cream apartment blocks with iron balconies, sun-bleached and dusty, laundry on half of them.",
+    choices: ["Palermo", "Catania", "Bari", "Cagliari", "Naples", "Genoa", "Valletta"],
+    credit: { author: "Dedda71", license: "CC BY 3.0", page: "https://commons.wikimedia.org/wiki/File:Via_dante_(palermo).jpg" }
+  },
+  {
+    city: "Tashkent",
+    image: "images/50-tashkent.jpg",
+    fact: "Soviet panel blocks with the ornament cast into the concrete: sunburst grilles, deep loggias, a whole street planned at once.",
+    choices: ["Tashkent", "Samarkand", "Bukhara", "Almaty", "Bishkek", "Dushanbe", "Ashgabat"],
+    credit: { author: "Francisco Anzola", license: "CC BY 3.0", page: "https://commons.wikimedia.org/wiki/File:Apartment_Building_(220130683).jpeg" }
   }
 ];
