@@ -278,5 +278,33 @@ window.QUIZ = [
     fact: "Stucco over brick gone grey, awnings out to the kerb, shop signs stacked three storeys up and the whole street under a web of cable.",
     choices: ["Kolkata", "Mumbai", "Delhi", "Dhaka", "Patna", "Lucknow", "Colombo"],
     credit: { author: "Billjones94", license: "CC BY-SA 4.0", page: "https://commons.wikimedia.org/wiki/File:The_New_Market_seen_from_far,_and_Kolkata_Municipal_Corporation_building_in_right,_in_Kolkata,_West_Bengal.jpg" }
+  },
+  {
+    city: "Yerevan",
+    image: "images/40-yerevan.jpg",
+    fact: "Black and pink volcanic tuff, cut rough, with an Oriental timber balcony bolted on over the street.",
+    choices: ["Yerevan", "Tbilisi", "Baku", "Gyumri", "Vanadzor", "Tehran", "Trabzon"],
+    credit: { author: "Armineaghayan", license: "CC BY-SA 4.0", page: "https://commons.wikimedia.org/wiki/File:Buildings_on_Mher_Mkrtchyan_street,_Yerevan_(3).jpg" }
+  },
+  {
+    city: "Lima",
+    image: "images/41-lima.jpg",
+    fact: "Closed wooden balconies — balcones de cajon — hung over the pavement, the whole facade painted one strong colour.",
+    choices: ["Lima", "Trujillo", "Arequipa", "Quito", "Guayaquil", "Santiago", "Bogota"],
+    credit: { author: "Diego Delso", license: "CC BY-SA 4.0", page: "https://commons.wikimedia.org/wiki/File:Casa_en_Jir%C3%B3n_Ancash,_Lima,_Per%C3%BA,_2015-07-28,_DD_78.JPG" }
+  },
+  {
+    city: "Yangon",
+    image: "images/42-yangon.jpg",
+    fact: "Colonial arcades with a century of monsoon in the stucco: cornices, shutters, cars parked under the columns.",
+    choices: ["Yangon", "Mandalay", "Bangkok", "Kuala Lumpur", "Colombo", "Dhaka", "Phnom Penh"],
+    credit: { author: "Bjoertvedt", license: "CC BY-SA 4.0", page: "https://commons.wikimedia.org/wiki/File:Kyauktada_Yangon_downtown_IMG_20180407_130442_pansodan_street_Yangon.jpg" }
+  },
+  {
+    city: "Ulaanbaatar",
+    image: "images/43-ulaanbaatar.jpg",
+    fact: "Gers pitched in fenced yards up the hillside, timber and corrugated iron around them, glass towers down in the valley.",
+    choices: ["Ulaanbaatar", "Bishkek", "Almaty", "Ulan-Ude", "Irkutsk", "Astana", "Tashkent"],
+    credit: { author: "Quintin Soloviev", license: "CC BY 4.0", page: "https://commons.wikimedia.org/wiki/File:Ger_district_of_Ulaanbaatar.jpg" }
   }
 ];

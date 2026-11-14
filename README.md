@@ -3,7 +3,7 @@
 **Live: https://sezabart.github.io/city-guesser/**
 
 A city-guessing game for a TV and a remote control. Ten photographs per round,
-drawn at random from a bank of thirty-nine, seven choices each, and nothing to go on
+drawn at random from a bank of forty-three, seven choices each, and nothing to go on
 but streets, roofs and skylines. Plain HTML, one stylesheet, and a small piece
 of deliberately old-fashioned JavaScript.
 
@@ -23,7 +23,7 @@ the highlight itself instead of relying on the browser.
 | File | What it is |
 | --- | --- |
 | `index.html` | The only page; renders every screen |
-| `quiz-data.js` | The quiz: 39 cities, facts, seven options each, photo credits |
+| `quiz-data.js` | The quiz: 43 cities, facts, seven options each, photo credits |
 | `game.js` | The engine: shuffle, screens, keyboard, score |
 | `style.css` | The whole design, sized for a TV |
 | `images/` | 1600×900 JPEGs, pre-cropped |
