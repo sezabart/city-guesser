@@ -24,13 +24,13 @@ the highlight itself instead of relying on the browser.
 | --- | --- |
 | `index.html` | The only page; renders every screen |
 | `quiz-data.js` | The quiz: 43 cities, facts, seven options each, photo credits |
-| `game.js` | The engine: shuffle, screens, keyboard, score |
+| `game.js` | The engine: shuffle, screens, keyboard, score, what has been seen |
 | `style.css` | The whole design, sized for a TV |
 | `images/` | 1600×900 JPEGs, pre-cropped |
 
-Each round shuffles the full bank, takes ten, and shuffles the seven options for
-every question — so two rounds are never quite the same, while the answer is
-always in the same place in the data (`city`).
+Each round draws ten out of the bank, unseen photographs first, and shuffles the
+seven options for every question — so two rounds are never quite the same, while
+the answer is always in the same place in the data (`city`).
 
 JavaScript is ES5 on purpose: `var`, functions, `document.createElement`.
 No modules, no arrow functions, no template strings, no `fetch`, no
@@ -39,6 +39,23 @@ browser is likely to run.
 
 Answers are ignored for 400 ms after a new photo appears, so a held-down remote
 OK button cannot answer for you before you have looked at the picture.
+
+## What you have already seen
+
+A round prefers photographs you have not been shown yet. Repeats only turn up
+once the unseen ones run out — the oldest first — and once the whole bank has
+been played the cycle starts again from nothing.
+
+The record is a list of city names in the browser's `localStorage`, under
+`cityguesser.seen.v1`: no account, no server, nothing to sign into. The title
+screen says how many photographs are still new and has a **Forget what I have
+seen** button (the arrow keys reach it) for a clean slate. If a browser has no
+storage the game still skips within the session; it just forgets between
+visits.
+
+`SEEN_SEED` at the top of `game.js` holds the cities played before the game
+remembered anything. It is written into the store on the first run and then
+stops mattering — trim or empty it once the history has taken over.
 
 ## Add a city
 

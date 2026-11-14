@@ -50,6 +50,76 @@
     return new Date().getTime();
   }
 
+  /* ------------------------------------------------------- what was seen */
+
+  // The bank is bigger than a round, so a round prefers photographs that have
+  // not come up yet and only repeats when the unseen ones run out. Progress is
+  // kept in localStorage; a browser without storage still skips within the
+  // session, it just forgets between visits.
+  var STORE = "cityguesser.seen.v1";
+  var SEP = "|";
+
+  // Photographs played before the game kept track of itself. Written into the
+  // store once, on the first run after this ships, so the TV does not hand back
+  // a city that has already been seen. "Forget what I have seen" clears it.
+  var SEEN_SEED = [
+    "Paris", "Porto", "Istanbul", "Tbilisi", "Chicago", "S\u00e3o Paulo",
+    "Seoul", "Hong Kong", "Valletta", "Havana", "Hanoi", "Marrakesh",
+    "Naples", "Rotterdam", "Bergen", "Cairo", "Reykjav\u00edk", "Genoa",
+    "Krak\u00f3w", "Bangkok", "Taipei", "Mexico City", "Jerusalem",
+    "Valpara\u00edso", "Zanzibar City", "Buenos Aires", "Montreal",
+    "Melbourne", "Athens", "Moscow", "Lisbon", "Berlin", "Riga",
+    "Bucharest", "Bogota", "Busan", "Auckland", "Accra", "Kolkata"
+  ];
+
+  var seenMem = null;   // stands in for localStorage where there is none
+
+  function inList(list, value) {
+    var i;
+    for (i = 0; i < list.length; i++) if (list[i] === value) return true;
+    return false;
+  }
+
+  function seenRead() {
+    var raw = null, parts, out = [], i;
+    try { raw = window.localStorage.getItem(STORE); } catch (e) { raw = null; }
+    if (raw === null) return null;
+    parts = String(raw).split(SEP);
+    for (i = 0; i < parts.length; i++) if (parts[i]) out.push(parts[i]);
+    return out;
+  }
+
+  function seenWrite(list) {
+    seenMem = list;
+    try { window.localStorage.setItem(STORE, list.join(SEP)); } catch (e) {}
+  }
+
+  function seenList() {
+    var list = seenRead();
+    if (list === null) {                 // first run here, or no storage at all
+      list = seenMem ? seenMem.slice() : SEEN_SEED.slice();
+      seenWrite(list);
+    }
+    return list;
+  }
+
+  function seenAdd(city) {
+    var list = seenList();
+    if (inList(list, city)) return;
+    list.push(city);
+    seenWrite(list);
+  }
+
+  function seenForget() {
+    seenWrite([]);
+  }
+
+  function unseenCount() {
+    var seen = seenList(), n = 0, i;
+    for (i = 0; i < QUIZ.length; i++) if (!inList(seen, QUIZ[i].city)) n++;
+    return n;
+  }
+
   function buttons() {
     return app.getElementsByTagName("button");
   }
@@ -130,11 +200,34 @@
       "order every round. Seven choices each, and nothing to go on but " +
       "streets, roofs and skylines."));
 
+    var fresh = unseenCount();
+    if (fresh === 0) {
+      wrap.appendChild(el("p", "note", "Every photograph in the bank has been " +
+        "played. The next round starts the cycle again \u2014 or forget the " +
+        "history below."));
+    } else if (fresh < ROUND_SIZE) {
+      wrap.appendChild(el("p", "note", "Only " + fresh + " photograph" +
+        (fresh === 1 ? "" : "s") + " left that you have not seen, so this " +
+        "round fills up with repeats."));
+    } else {
+      wrap.appendChild(el("p", "note", fresh + " of the " + QUIZ.length +
+        " photographs are still new to you. Those come up before any repeat."));
+    }
+
     var go = el("button", "start");
     go.type = "button";
     go.appendChild(document.createTextNode("Start"));
     go.onclick = start;
     wrap.appendChild(go);
+
+    var forget = el("button", "ghost");
+    forget.type = "button";
+    forget.appendChild(document.createTextNode("Forget what I have seen"));
+    forget.onclick = function () { seenForget(); showTitle(); };
+    wrap.appendChild(forget);
+
+    wrap.appendChild(el("div", "hint",
+      "ARROWS TO MOVE BETWEEN BUTTONS \u00b7 OK TO CHOOSE"));
 
     var links = el("div", "small");
     var credits = el("a", "", "PHOTO CREDITS");
@@ -152,10 +245,24 @@
   }
 
   function start() {
-    var order = [], i;
-    for (i = 0; i < QUIZ.length; i++) order.push(i);
+    var seen = seenList(), fresh = [], old = [], i, order;
+
+    // unseen photographs first, then the ones seen longest ago (the store is
+    // kept in the order they were played, so old[0] is the oldest)
+    for (i = 0; i < QUIZ.length; i++) {
+      if (inList(seen, QUIZ[i].city)) old.push(i);
+      else fresh.push(i);
+    }
+
+    if (!fresh.length) {          // whole bank played: begin the cycle again
+      seenForget();
+      fresh = old;
+      old = [];
+    }
+
+    shuffle(fresh);
+    order = fresh.concat(old).slice(0, Math.min(ROUND_SIZE, QUIZ.length));
     shuffle(order);
-    order = order.slice(0, Math.min(ROUND_SIZE, order.length));
 
     st = {
       screen: "q",
@@ -175,6 +282,7 @@
     var q = QUIZ[st.order[st.pos]];
     var i, btn;
 
+    seenAdd(q.city);
     st.options = shuffle(q.choices.slice());
     st.screen = "q";
     st.lock = now() + GUARD_MS;
@@ -412,14 +520,16 @@
     if (st.screen === "q") {
       if (key >= 48 && key <= 57) { stop(e); pickByNumber(key - 48); return; }       // 1–9
       if (key >= 96 && key <= 105) { stop(e); pickByNumber(key - 96); return; }      // numpad
-      delta = 0;
-      if (key === 37) delta = -1;
-      else if (key === 39) delta = 1;
-      else if (key === 38) delta = -PER_ROW;
-      else if (key === 40) delta = PER_ROW;
-      if (delta) { stop(e); move(delta); return; }
-      return;  // Enter/Space: the focused button handles it natively
     }
+
+    // Arrows work on every screen: in the answer grid up/down jump a whole row,
+    // elsewhere they simply step to the next button (Start / Forget history).
+    delta = 0;
+    if (key === 37) delta = -1;
+    else if (key === 39) delta = 1;
+    else if (key === 38) delta = st.screen === "q" ? -PER_ROW : -1;
+    else if (key === 40) delta = st.screen === "q" ? PER_ROW : 1;
+    if (delta) { stop(e); move(delta); return; }
 
     // On the verdict / final / credits screens there is exactly one thing to
     // press, so Enter or Space anywhere should do it — even if focus was lost.

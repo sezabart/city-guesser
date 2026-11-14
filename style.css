@@ -426,3 +426,36 @@ button::-moz-focus-inner { border: 0; padding: 0; }
 
 .answers span.ok { color: #8fe3b0; border-color: #1f9d55; }
 .answers span.no { color: #ffa79a; border-color: #a4372a; }
+
+/* the "how many are still new to you" line on the title screen */
+.note {
+  font-size: 2.05vh;
+  color: #a9b8d4;
+  margin: -1.2vh 0 2.6vh;
+  max-width: 62ch;
+  line-height: 1.45;
+}
+
+/* the secondary title-screen button: quiet, but still a big focus target */
+.ghost {
+  font-family: inherit;
+  font-size: 1.5vh;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #7f8fb0;
+  background: transparent;
+  border: 0.2vh solid #26324c;
+  border-radius: 0.8vh;
+  padding: 1.4vh 2.6vh;
+  margin: 1.4vh 0 0;
+  cursor: pointer;
+}
+
+.ghost:focus,
+.ghost:hover {
+  color: #0b0f16;
+  background: #ffd23f;
+  border-color: #ffd23f;
+  outline: none;
+}
