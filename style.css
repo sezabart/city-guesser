@@ -319,20 +319,55 @@ a:focus { outline: none; }
 
 .small a { color: #7f8ca6; }
 
-/* ---------- credits ---------- */
+/* ---------- credits screen ---------- */
 
-.credits {
-  height: auto;
+.credits-screen {
+  height: 100%;
   display: block;
-  max-width: 54em;
-  margin: 0 auto;
-  padding: 5vh 3vw;
+  padding: 3.2vh 4vw;
 }
 
-.credits h1 { font-size: 4vh; margin: 0 0 2vh; }
-.credits li { font-size: 1.9vh; line-height: 1.5; color: #93a3c0; margin-bottom: 1.4vh; }
-.credits ul { padding-left: 2.2vh; }
-.credits a { color: #ffd400; }
+.credits-screen h1 { font-size: 3.6vh; margin: 0 0 1.8vh; }
+
+.back {
+  display: inline-block;
+  background: #1b2437;
+  color: #eaf0fb;
+  border: 0.22vh solid #2c3a58;
+  border-radius: 0.9vh;
+  font-size: 2vh;
+  font-weight: 700;
+  padding: 1.2vh 2.6vh;
+  margin-bottom: 2.4vh;
+}
+
+.back:focus,
+.back:hover {
+  outline: none;
+  background: #ffd400;
+  color: #0b0f17;
+  border-color: #fff;
+  box-shadow: 0 0 0 0.5vh #fff;
+}
+
+.credit-cols { display: flex; }
+
+.credit-cols ul {
+  flex: 1 1 50%;
+  margin: 0;
+  padding-left: 2vh;
+  list-style: none;
+}
+
+.credit-cols li {
+  font-size: 1.55vh;
+  line-height: 1.45;
+  color: #8a99b5;
+  margin-bottom: 1vh;
+}
+
+.credit-cols b { color: #dde6f5; }
+.credit-cols a { color: #ffd400; }
 
 /* ---------- small screens (a phone or a laptop window) ---------- */
 
@@ -343,3 +378,51 @@ a:focus { outline: none; }
   .fb h1 { font-size: 5.5vh; }
   .title { font-size: 9vh; }
 }
+
+/* ---------- screens rendered by game.js ---------- */
+
+#app { height: 100%; }
+
+button.choice,
+button.start,
+button.next,
+button.back {
+  font-family: inherit;
+  -webkit-appearance: none;
+  appearance: none;
+  cursor: pointer;
+  text-align: center;
+}
+
+button::-moz-focus-inner { border: 0; padding: 0; }
+
+/* "you picked X" on a wrong verdict */
+.picked {
+  font-size: 1.9vh;
+  color: #d98b7f;
+  margin: -0.6vh 0 1.6vh;
+  letter-spacing: 0.02em;
+}
+
+/* the round summary on the final screen */
+.answers {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  max-width: 74vw;
+  margin: 0 0 3.4vh;
+}
+
+.answers span {
+  font-size: 1.65vh;
+  font-weight: 600;
+  padding: 0.9vh 1.4vh;
+  margin: 0 0.35vw 0.9vh;
+  border-radius: 0.6vh;
+  background: #131b2a;
+  border: 0.2vh solid #26324c;
+  color: #93a3c0;
+}
+
+.answers span.ok { color: #8fe3b0; border-color: #1f9d55; }
+.answers span.no { color: #ffa79a; border-color: #a4372a; }
